@@ -4,9 +4,7 @@ This is a demo of WebGL. It is a simple 3D scene with a rotating cube. We use th
 
 ## Pre-requisites
 
-Before installing project dependencies, you must have Node.js installed on your system. We recommend using Node Version Manager (nvm) to manage your Node.js versions. (Tested with v18.14.0)
-
-Strongly recommended to use [nvm](https://github.com/nvm-sh/nvm)
+Before installing project dependencies, you must have **Node.js** installed on your system. We recommend using **Node Version Manager** (`nvm`) to manage your Node.js versions. (Tested with v18.14.0)
 
 ## Installation
 Once Node.js is installed on your system, just can install the dependencies using `npm`.
