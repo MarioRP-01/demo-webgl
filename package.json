@@ -3,9 +3,10 @@
     "version": "0.0.1",
     "type": "module",
     "description": "A demo of WebGL",
-    "main": "src/main.js",
+    "main": "src/main.ts",
     "devDependencies": {
         "typescript": "^5.0.2",
+        "@types/three": "^0.150.2",
         "vite": "~4.3"
     },
     "dependencies": {
