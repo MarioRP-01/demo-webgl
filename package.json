@@ -1,11 +1,19 @@
 {
     "name": "demo-webgl",
     "version": "0.0.1",
+    "type": "module",
     "description": "A demo of WebGL",
+    "main": "src/main.js",
     "devDependencies": {
+        "typescript": "^5.0.2",
         "vite": "~4.3"
     },
     "dependencies": {
         "three": "^0.151.3"
+    },
+    "scripts": {
+        "dev": "npx vite",
+        "build": "npx vite build",
+        "preview": "npx vite preview"
     }
 }
