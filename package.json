@@ -1,0 +1,11 @@
+{
+    "name": "demo-webgl",
+    "version": "0.0.1",
+    "description": "A demo of WebGL",
+    "devDependencies": {
+        "vite": "~4.3"
+    },
+    "dependencies": {
+        "three": "^0.151.3"
+    }
+}
