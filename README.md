@@ -19,7 +19,6 @@ npm ci
 
 To start the development server, navigate to the project directory and run the following command:
 
-input:
 ```shell
 # input
 npm run dev
