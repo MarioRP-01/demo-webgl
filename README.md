@@ -52,6 +52,7 @@ npm run build
 
 ## References
 
+- [`nvm` installation guide](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
 - [Create Vite project](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
-- [Why `npm ci`instead of `npm install`?](https://stackoverflow.com/questions/48524417/should-the-package-lock-json-file-be-added-to-gitignore)
+- [Why `npm ci` instead of `npm install`?](https://stackoverflow.com/questions/48524417/should-the-package-lock-json-file-be-added-to-gitignore)
 - [three.js installation guide](https://threejs.org/docs/index.html#manual/en/introduction/Installation)
