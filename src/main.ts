@@ -1,5 +1,18 @@
+import './style.css'
+
 import * as THREE from 'three'
 import CubeScene from './CubeScene';
+
+import LoadService from './services/LoadService';
+
+const load_service = new LoadService()
+
+await load_service.load_html(
+  document.querySelector<HTMLDivElement>('#app')!,
+  'src/templates/index.html'
+)
+
+const canvas = document.querySelector('canvas#webgl')
 
 const cube_scene = new CubeScene()
 cube_scene.initialize()
@@ -11,12 +24,17 @@ const camera = new THREE.PerspectiveCamera(
   1000
 )
 
-const renderer = new THREE.WebGLRenderer()
-renderer.setSize(window.innerWidth, window.innerHeight)
-document.body.appendChild(renderer.domElement)
+const renderer = new THREE.WebGLRenderer({
+  canvas: canvas!
+})
+
+renderer.setSize(window.innerWidth/1.5, window.innerHeight/1.5)
+
+document
+  .querySelector<HTMLDivElement>('#display')!
+  .appendChild(renderer.domElement)
 
 camera.position.z = 5
-
 
 function animate() {
   requestAnimationFrame(animate)
