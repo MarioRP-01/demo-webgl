@@ -51,6 +51,8 @@ npm run build
 
 ## References
 
+- [demo-donut](https://github.com/ksbisht941/threejs-donut)
+- [demo-shooter](https://github.com/ourcade/threejs-getting-started)
 - [`nvm` installation guide](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/)
 - [Create Vite project](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
 - [Why `npm ci` instead of `npm install`?](https://stackoverflow.com/questions/48524417/should-the-package-lock-json-file-be-added-to-gitignore)
