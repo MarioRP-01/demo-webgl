@@ -5,30 +5,50 @@ import CubeScene from './CubeScene';
 
 import LoadService from './services/LoadService';
 
-const load_service = new LoadService()
+import BlasterScene from './BlasterScene';
 
-await load_service.load_html(
-  document.querySelector<HTMLDivElement>('#app')!,
-  'src/templates/index.html'
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+//const load_service = new LoadService()
+
+// await load_service.load_html(
+//   document.querySelector<HTMLDivElement>('#app')!,
+//   'src/templates/index.html'
+// )
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.getElementById('app') as HTMLCanvasElement
+})
+renderer.setSize(width, height)
+
+const camera = new THREE.PerspectiveCamera(
+  75, //campo de visión, 60 es el valor por defecto que usa unity
+  width / height, //relación de aspecto
+  0.1, //near plane, cómo de cerca está de la cámara
+  1000 //far plane, cómo de lejos está
 )
 
+const scene = new THREE.Scene()
+const scene_shooter = new BlasterScene(camera)
+
 const canvas = document.querySelector('canvas#webgl')
+
+
+scene_shooter.initialize()
+
 
 const cube_scene = new CubeScene()
 cube_scene.initialize()
 
-const camera = new THREE.PerspectiveCamera(
-  75, 
-  window.innerWidth / window.innerHeight,
-  0.1,
-  1000
-)
+function tick() {
+  scene_shooter.update()
+  renderer.render(scene_shooter, camera)
+  requestAnimationFrame(tick)
+}
 
-const renderer = new THREE.WebGLRenderer({
-  canvas: canvas!
-})
+tick()
 
-renderer.setSize(window.innerWidth/1.5, window.innerHeight/1.5)
+renderer.render(scene_shooter, camera)
 
 document
   .querySelector<HTMLDivElement>('#display')!
