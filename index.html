@@ -6,7 +6,32 @@
     <title>demo-webgl</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header class="container">
+          <h1 class="title"> Demo WebGL con Three.js </h1>
+      </header>
+      <main>
+          <div id="display" class="display">
+              <div class="demo-options">
+                  <a type="button" class="button" 
+                    href="src/demos/demo-cube/demo-cube.html">
+                    Demo Cubo
+                  </a>
+                  <a type="button" class="button" 
+                    href="src/demos/demo-donut/demo-donut.html">
+                    Demo Donut
+                  </a>
+                  <a type="button" class="button" 
+                    href="src/demos/demo-shooter/demo-shooter.html">
+                    Demo Shooter
+                  </a>
+              </div>
+          </div>
+      </main>
+      <footer>
+          <img src="public/assets/URJC-Logo.png" class="img-logo" alt="Logo URJC">
+      </footer>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
